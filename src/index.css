@@ -1,0 +1,96 @@
+:root {
+  --tile-black: #ADAFAF;
+  --tile-white: #E4E6E6;
+  --tile-highlight: #F4D248cc;
+}
+
+body {
+  margin: 0;
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* font-family:"Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.tile {
+  position: relative;
+  width: 75px;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin: 2px; */
+}
+
+.tile-white {
+  background: var(--tile-white);
+}
+
+.tile-black {
+  background: var(--tile-black);
+}
+
+.tile-highlight {
+  width: 60%;
+  height: 60%;
+  border-radius: 100%;
+  background: var(--tile-highlight);
+}
+
+.tile-feature {
+  position: absolute;
+  /* width: 100%; */
+  /* height: 100%; */
+  pointer-events: none;
+  z-index: 1;
+}
+
+.board {
+  background: var(--tile-black);
+  border: 6px solid var(--tile-black);
+  /* border-right: 12px solid var(--tile-black);
+  border-top: 12px solid #000;
+  border-bottom: 12px solid #fff; */
+  /* box-shadow: 6px -6px 0px 0px var(--tile-black), -6px 6px 0px 0px var(--tile-black); */
+
+  /* padding: 6px; */
+}
+
+.black-indicator {
+  width: inherit;
+  height: 6px;
+  background: #000;
+}
+.white-indicator {
+  width: inherit;
+  height: 6px;
+  background: #fff;
+}
+
+.white-claim {
+  width: 100%;
+  height: 100%;
+  outline: 5px solid #fff;
+  outline-offset: -5px;
+  z-index: 0;
+}
+
+.black-claim {
+  width: 100%;
+  height: 100%;
+  outline: 5px solid #000;
+  outline-offset: -5px;
+  z-index: 0;
+}
+
+.piece-img {
+  z-index: 1;
+}
